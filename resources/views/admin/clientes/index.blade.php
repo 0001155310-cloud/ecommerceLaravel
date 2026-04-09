@@ -10,7 +10,7 @@
 <body>
   <div class="wrapper">
     <aside class="sidebar">
-      <div class="logo"><span class="logo-badge">A</span><span>BroShop Admin</span></div>
+      <div class="logo"><span class="logo-badge">A</span><span>CesarShop Admin</span></div>
       <nav class="menu">
         <a href="/admin">Dashboard</a>
         <a href="/admin/produtos">Produtos</a>
@@ -23,6 +23,7 @@
     <main class="content">
       <div class="top">
         <div><h1>Clientes</h1><p class="small">Base de compradores e relacionamento.</p></div>
+        <button class="btn btn-primary" onclick="location.href='/admin/clientes/cadastro'">Novo clientes</button>
       </div>
 
       <section class="grid-3">
@@ -33,12 +34,25 @@
 
       <section class="card" style="margin-top:18px">
         <table class="table">
-          <thead><tr><th>Cliente</th><th>Email</th><th>Ultima compra</th><th>Perfil</th></tr></thead>
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Email</th>
+              <th>Ultima compra</th>
+              <th>Perfil</th>
+              <th>Excluir</th>
+            </tr>
+          </thead>
           <tbody>
-            <tr><td>Mariana Alves</td><td>mariana@email.com</td><td>01/04/2026</td><td><span class="pill success">VIP</span></td></tr>
-            <tr><td>Lucas Silva</td><td>lucas@email.com</td><td>01/04/2026</td><td><span class="pill warning">Recorrente</span></td></tr>
-            <tr><td>Rafaela Costa</td><td>rafaela@email.com</td><td>31/03/2026</td><td><span class="pill success">Ativa</span></td></tr>
-            <tr><td>Pedro Lima</td><td>pedro@email.com</td><td>31/03/2026</td><td><span class="pill danger">Inativa</span></td></tr>
+            <tr>
+            @foreach ($clientes as $c)
+            <td>{{ $c->nome }}</td>
+            <td>{{ $c->email }}</td>
+            <td>{{ $c->data }}</td>
+            <td>{{ $c->perfil }}</td>
+            <td> <a href="/admin/clientes/excluir/{{$c->id}}">Excluir</a></td>
+            </tr>
+            @endforeach
           </tbody>
         </table>
       </section>

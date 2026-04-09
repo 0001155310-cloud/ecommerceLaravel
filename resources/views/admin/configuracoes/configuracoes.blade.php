@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin | Configuracoes</title>
-  <link rel="stylesheet" href="assets/admin/css/style.css" />
-  <script defer src="assets/admin/js/script.js"></script>
+  <link rel="stylesheet" href="/assets_admin/css/style.css" />
+  <script defer src="assets/js/script.js"></script>
 </head>
 <body>
   <div class="wrapper">
     <aside class="sidebar">
-      <div class="logo"><span class="logo-badge">A</span><span>NovaShop Admin</span></div>
+      <div class="logo"><span class="logo-badge">A</span><span>BroShop Admin</span></div>
       <nav class="menu">
-        <a href="index">Dashboard</a>
-        <a href="produtos">Produtos</a>
-        <a href="pedidos">Pedidos</a>
-        <a href="clientes">Clientes</a>
-        <a class="active" href="configuracoes">Configuracoes</a>
+        <a href="/admin">Dashboard</a>
+        <a href="/admin/produtos">Produtos</a>
+        <a href="/admin/pedidos">Pedidos</a>
+        <a href="/admin/clientes">Clientes</a>
+        <a class="active" href="/admin/configuracoes">Configuracoes</a>
       </nav>
     </aside>
 

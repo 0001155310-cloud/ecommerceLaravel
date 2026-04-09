@@ -1,27 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Checkout | NovaShop</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script defer src="assets/js/script.js"></script>
-</head>
-<body>
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="index"><span class="brand-badge">N</span><span>NovaShop</span></a>
-      <nav class="nav-links">
-        <a href="catalogo">Catalogo</a>
-        <a href="produto">Produto</a>
-        <a href="carrinho">Carrinho</a>
-        <a href="checkout">Checkout</a>
-        <a href="contato">Contato</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="page-hero">
+@extends("index")
+@section("conteudo")
+<main class="page-hero">
     <div class="container">
       <div class="notice">Pedido simulado com sucesso. Ajuste este fluxo para conectar ao seu backend real.</div>
       <div class="checkout-grid" style="margin-top:18px">
@@ -58,5 +37,4 @@
       </div>
     </div>
   </main>
-</body>
-</html>
+@endsection

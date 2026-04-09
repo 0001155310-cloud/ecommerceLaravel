@@ -1,28 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catalogo | NovaShop</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script defer src="assets/js/script.js"></script>
-</head>
-<body>
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="index"><span class="brand-badge">N</span><span>NovaShop</span></a>
-      <nav class="nav-links">
-        <a href="catalogo">Catalogo</a>
-        <a href="produto">Produto</a>
-        <a href="carrinho">Carrinho</a>
-        <a href="checkout">Checkout</a>
-        <a href="contato">Contato</a>
-      </nav>
-      <div class="nav-actions"><a class="btn btn-primary" href="checkout">Finalizar compra</a></div>
-    </div>
-  </header>
-
-  <main class="page-hero">
+@extends("index")
+@section("conteudo")
+<main class="page-hero">
     <div class="container page-panel">
       <div class="section-head">
         <div>
@@ -38,16 +16,10 @@
       </div>
 
       <div class="grid-4" style="margin-top:22px">
-        <article class="card"><img src="assets/img/product1.svg" alt=""><div class="product-body"><span class="tag">Moda</span><h3>Tenis Urban</h3><div class="price" data-price="289.9"></div><div class="meta"><span>Pronta entrega</span><a href="produto">Ver detalhes</a></div></div></article>
-        <article class="card"><img src="assets/img/product2.svg" alt=""><div class="product-body"><span class="tag">Acessorios</span><h3>Mochila Pro</h3><div class="price" data-price="229.9"></div><div class="meta"><span>Top seller</span><a href="produto">Ver detalhes</a></div></div></article>
-        <article class="card"><img src="assets/img/product3.svg" alt=""><div class="product-body"><span class="tag">Lifestyle</span><h3>Relogio Edge</h3><div class="price" data-price="399.9"></div><div class="meta"><span>Premium</span><a href="produto">Ver detalhes</a></div></div></article>
-        <article class="card"><img src="assets/img/product4.svg" alt=""><div class="product-body"><span class="tag">Tech</span><h3>Headphone Air</h3><div class="price" data-price="519.9"></div><div class="meta"><span>Frete gratis</span><a href="produto">Ver detalhes</a></div></div></article>
-        <article class="card"><img src="assets/img/product2.svg" alt=""><div class="product-body"><span class="tag">Travel</span><h3>Mochila City</h3><div class="price" data-price="199.9"></div><div class="meta"><span>Novo</span><a href="produto">Ver detalhes</a></div></div></article>
-        <article class="card"><img src="assets/img/product1.svg" alt=""><div class="product-body"><span class="tag">Casual</span><h3>Tenis Prime</h3><div class="price" data-price="259.9"></div><div class="meta"><span>Conforto</span><a href="produto">Ver detalhes</a></div></div></article>
-        <article class="card"><img src="assets/img/product4.svg" alt=""><div class="product-body"><span class="tag">Audio</span><h3>Fone Lite</h3><div class="price" data-price="179.9"></div><div class="meta"><span>Bluetooth</span><a href="produto">Ver detalhes</a></div></div></article>
-        <article class="card"><img src="assets/img/product3.svg" alt=""><div class="product-body"><span class="tag">Classic</span><h3>Watch Core</h3><div class="price" data-price="349.9"></div><div class="meta"><span>Elegante</span><a href="produto">Ver detalhes</a></div></div></article>
+        @foreach ($produtos as $produtos)
+        <article class="card"><img src="assets/img/product1.svg" alt=""><div class="product-body"><span class="tag">{{$produtos["categoria"]}}</span><h3>{{$produtos["nome"]}}</h3><div class="price" data-price={{$produtos["preco"]}}></div><div class="meta"><span>Pronta entrega</span><a href="produto">Ver detalhes</a></div></div></article>
+        @endforeach
       </div>
     </div>
   </main>
-</body>
-</html>
+@endsection

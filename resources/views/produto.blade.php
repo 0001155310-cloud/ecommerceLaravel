@@ -1,27 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Produto | NovaShop</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script defer src="assets/js/script.js"></script>
-</head>
-<body>
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="index"><span class="brand-badge">N</span><span>NovaShop</span></a>
-      <nav class="nav-links">
-        <a href="catalogo">Catalogo</a>
-        <a href="produto">Produto</a>
-        <a href="carrinho">Carrinho</a>
-        <a href="checkout">Checkout</a>
-        <a href="contato">Contato</a>
-      </nav>
-      <div class="nav-actions"><a class="btn btn-light" href="carrinho">Ir para carrinho</a></div>
-    </div>
-  </header>
-
+@extends("index")
+@section("conteudo")
   <main class="page-hero">
     <div class="container page-panel product-grid">
       <div class="card"><img src="assets/img/product1.svg" alt="Tenis Urban"></div>
@@ -51,5 +29,4 @@
       </div>
     </div>
   </main>
-</body>
-</html>
+  @endsection
